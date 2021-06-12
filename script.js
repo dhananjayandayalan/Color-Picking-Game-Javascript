@@ -22,7 +22,7 @@ let box4 = document.getElementById('box-4');
 // Status Text
 
 let statusText = document.getElementById('status');
-// let start = false;
+let start = false;
 
 // Modal Text
 let modalTitleText = document.getElementById('modal-title-text');
@@ -47,19 +47,19 @@ setBoxColors();
 
 box1.addEventListener('click', (e) => {
     e.preventDefault();
-    compareColor(box1.innerText);
+    compareColor(fourBoxColor[0]);
 });
 box2.addEventListener('click', (e) => {
     e.preventDefault();
-    compareColor(box1.innerText);
+    compareColor(fourBoxColor[1]);
 });
 box3.addEventListener('click', (e) => {
     e.preventDefault();
-    compareColor(box1.innerText);
+    compareColor(fourBoxColor[2]);
 });
 box4.addEventListener('click', (e) => {
     e.preventDefault();
-    compareColor(box1.innerText);
+    compareColor(fourBoxColor[3]);
 });
 
 function compareColor(color) {
@@ -68,7 +68,8 @@ function compareColor(color) {
     rv = parseInt(rv);
     gv = parseInt(gv);
     bv = parseInt(bv);
-    if(rv === redValue && gv === greenValue && bv === blueValue) {
+    console.log(rv === redValue && gv === greenValue && bv === blueValue);
+    if(rv == redValue && gv == greenValue && bv == blueValue) {
         won();
     } else {
         setLife();
@@ -100,14 +101,14 @@ function won() {
     modalTitleText.innerText = "You Won";
     modalTitleDesc.innerText = "Click the button to Play Again";
     modalBtnText.innerText = "Play Again";
-    document.getElementById('openModal').click();
+    document.querySelector('.modalTrigger').click();
 }
 
 function lost() {
     modalTitleText.innerText = "You Lost";
     modalTitleDesc.innerText = "Click the button to Play Again";
     modalBtnText.innerText = "Play Again";
-    document.getElementById('openModal').click();
+    document.querySelector('.modalTrigger').click();
 }
 
 function generateColors(num) {
