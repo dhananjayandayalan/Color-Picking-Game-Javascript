@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Color Picking Quiz</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    </head>
+    <body>
+        <header class="header">Color Picking Quiz</header>
+        <div class="container">
+            <div class="question-container">
+                <div class="redText"><span>Red</span></div>
+                <div class="greenText"><span>Green</span></div>
+                <div class="blueText"><span>Blue</span></div>
+                <div><span id="redValue">255</span></div>
+                <div><span id="greenValue">255</span></div>
+                <div><span id="blueValue">255</span></div>
+                <div><span id="life-1">💗</span></div>
+                <div><span id="life-2">💗</span></div>
+                <div><span id="life-3">💗</span></div>
+            </div>
+            <div class="status-container">
+                <span id="status">Click a Color</span>
+            </div>
+            <div class="option-container">
+                <div id="box-1"></div>
+                <div id="box-2"></div>
+                <div id="box-3"></div>
+                <div id="box-4"></div>
+            </div>
+            <!-- <a href="#openModal" id=''>Click me to open modal window</a> -->
+        </div>
+
+        <div id="openModal" class="modalWindow">
+            <div class="modal-container">
+                <div id="modal-title">
+                    <h2 id="modal-title-text">You Won</h2>
+                </div>
+                <div id="modal-desc">
+                    <p id="modal-desc-text">Please Click Ok to Play Again</p>
+                </div>
+                <div id="modal-btn-type">
+                    <a href="/" title="Ok" id="modal-btn-type-text"
+                        >Play Again</a
+                    >
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            Small Javascript Project by
+            <a href="https://codepen.io/dhananjayandayalan" target="_blank"
+                >Dhananjayan Dayalan</a
+            >
+            <br />Made with ❤️ using <img src="stack.png" alt="html logo" />
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
